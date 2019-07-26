@@ -13,14 +13,13 @@
         <servlet-name>appServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-    <filter-mapping>
-        <filter-name>authFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
     <filter-mapping>
         <filter-name>loggerFilter</filter-name>
         <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>authFilter</filter-name>
+        <url-pattern>/api/*</url-pattern>
     </filter-mapping>
 
 

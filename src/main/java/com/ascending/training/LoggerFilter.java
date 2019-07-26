@@ -8,8 +8,9 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
 
-@WebFilter(filterName = "loggerFilter", urlPatterns = {"/*"})
+@WebFilter(filterName = "loggerFilter")
 public class LoggerFilter implements Filter {
 
     FilterConfig filterConfig = null;
@@ -19,11 +20,10 @@ public class LoggerFilter implements Filter {
 
     public void doFilter(ServletRequest request, ServletResponse response,
                          FilterChain chain) throws IOException, ServletException {
-
-        System.out.println("In LoggerFilter before doFilter");
-        chain.doFilter(request, response);
-        System.out.println("In LoggerFilter after doFilter");
-
+            System.out.println(((HttpServletRequest) request).getServletPath());
+            System.out.println("In LoggerFilter before doFilter");
+            chain.doFilter(request, response);
+            System.out.println("In LoggerFilter after doFilter");
     }
 
     public void init(FilterConfig fConfig) throws ServletException {
