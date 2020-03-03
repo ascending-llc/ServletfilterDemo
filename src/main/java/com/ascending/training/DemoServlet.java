@@ -13,6 +13,7 @@ public class DemoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
         out.println("Welcome ASCENDING");
+        System.out.println(req.getServletPath());
         System.out.println("We are in HelloServlet");
     }
 }
