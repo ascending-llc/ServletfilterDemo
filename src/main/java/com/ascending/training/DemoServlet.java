@@ -14,6 +14,11 @@ public class DemoServlet extends HttpServlet {
         PrintWriter out = resp.getWriter();
         out.println("Welcome ASCENDING");
         System.out.println(req.getServletPath());
+//        if(req.getServletPath().equals("/")){
+//            //todo
+//        }else{
+//            //todo
+//        }
         System.out.println("We are in HelloServlet");
     }
 }
