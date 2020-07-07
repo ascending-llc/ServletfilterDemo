@@ -36,5 +36,7 @@
         <filter-name>loggerFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
+    <!--<listener>-->
+        <!--<listener-class>com.ascending.training.StartupListener</listener-class>-->
+    <!--</listener>-->
 </web-app>
